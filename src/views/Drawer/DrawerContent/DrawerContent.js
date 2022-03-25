@@ -1,14 +1,14 @@
 const DrawerContent = ({ place }) => {
-	console.log("Place: ", place);
+	console.log("Place: ", Object.keys(place));
 
 	return (
 		<>
-			{place?.length <= 0 && (
+			{Object.keys(place)?.length <= 0 && (
 				<>
 					<p>Are looking for any place</p>
 				</>
 			)}
-			{place?.length > 0 && (
+			{Object.keys(place).length > 0 && (
 				<div className="m_drawer-content">
 					<h4>{place.address}</h4>
 					<p className="">
