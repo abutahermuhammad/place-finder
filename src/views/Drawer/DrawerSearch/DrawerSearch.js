@@ -24,7 +24,10 @@ const DrawerSearch = ({ className, setPlace, places, setPlaces }) => {
 					placeholder="Search your destination"
 					className="m_form-place"
 					value={searchPlace}
-					onChange={(e) => setSearchPlace(e.target.value)}
+					onChange={(e) => {
+						setSearchPlace(e.target.value);
+						searchHandler(e, searchPlace);
+					}}
 				/>
 				<input type="submit" value="Search" className="m_form-submit" />
 			</form>
